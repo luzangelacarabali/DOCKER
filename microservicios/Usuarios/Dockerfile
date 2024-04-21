@@ -1,10 +1,10 @@
 FROM node:20
 
-WORKDIR /ordenes
+WORKDIR /usuarios
 COPY package.json .
 RUN npm install
 
-EXPOSE 3003
+EXPOSE 3001
 
 COPY . .
 CMD npm start
