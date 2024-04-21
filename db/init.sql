@@ -1,5 +1,5 @@
 create database almacen2;
-use almacen almacen2;
+use almacen2;
 
 create table usuarios(
     nombre varchar(50),
