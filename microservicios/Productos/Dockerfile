@@ -1,12 +1,14 @@
-FROM node:20
+FROM node:latest
 
-WORKDIR /productos 
-COPY ./src .
+EXPOSE 3002
+
+WORKDIR /Productos
 
 RUN npm init --yes
 RUN npm install express morgan mysql mysql2 axios
 
-EXPOSE 3002
+COPY src/controllers /Productos/src/controllers
+COPY src/models /Productos/src/models
+COPY src/index.js /Productos/src
 
-
-CMD node src/index.js
+CMD node index.js
