@@ -1,11 +1,13 @@
 FROM node:20
 
 WORKDIR /ordenes
-COPY package.json .
-COPY  package-lock.json .
-RUN npm install
+
+COPY ./src .
+
+RUN npm init --yes
+RUN npm install express morgan mysql mysql2 axios
 
 EXPOSE 3003
 
 COPY . .
-CMD npm start
+CMD  node src/index.js
