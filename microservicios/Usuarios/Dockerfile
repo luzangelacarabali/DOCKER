@@ -1,10 +1,11 @@
 FROM node:20
 
 WORKDIR /usuarios
-COPY package.json .
-RUN npm install
+COPY ./src .
+
+RUN npm init --yes
+RUN npm install express morgan mysql mysql2 axios
 
 EXPOSE 3001
 
-COPY . .
-CMD npm start
+CMD node src/index.js
