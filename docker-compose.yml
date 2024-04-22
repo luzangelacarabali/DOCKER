@@ -40,7 +40,7 @@ services:
     build: ./microWeb
     container_name: microweb
     ports:
-      - "8080:80"
+      - "3080:80"
     depends_on:
       - usuarios
       - productos
