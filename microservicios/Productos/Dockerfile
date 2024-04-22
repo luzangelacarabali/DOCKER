@@ -8,5 +8,5 @@ RUN npm install express morgan mysql mysql2 axios
 
 EXPOSE 3002
 
-COPY . .
+
 CMD node src/index.js
