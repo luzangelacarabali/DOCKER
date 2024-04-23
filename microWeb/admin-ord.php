@@ -4,7 +4,8 @@
     if ($us == "") {
         header("Location: index.html");
     }
-    ?>
+?>
+        
 <!DOCTYPE html>
 <html lang="en">
 
