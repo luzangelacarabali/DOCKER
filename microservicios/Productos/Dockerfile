@@ -1,6 +1,7 @@
 FROM node:20
 
 WORKDIR /Productos
+
 COPY src/controllers /Productos/src/controllers
 COPY src/models /Productos/src/models
 COPY src/index.js /Productos/src
